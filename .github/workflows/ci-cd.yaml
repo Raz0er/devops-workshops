@@ -38,3 +38,7 @@ jobs:
 
       - name: Add formatting
         run: flake8 .
+
+  deploy:
+    runs-on: ubuntu-latest
+    
