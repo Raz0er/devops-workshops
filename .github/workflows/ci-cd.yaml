@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v5
 
       - name: Setup python
-        uses: actions/setup-python@v6
+        uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.version }}
 
@@ -35,3 +35,6 @@ jobs:
 
       - name: Run test
         run: pytest
+
+      - name: Add formatting
+        run: flake8 .
