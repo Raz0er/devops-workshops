@@ -1,6 +1,6 @@
 name: CI/CD
 
-trigger: [push]
+on: [push]
   # push:
   #   branches:
   #     - main
