@@ -57,4 +57,4 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v6
         with:
           role-to-assume: arn:aws:iam::270840513069:role/github-oidc
-          aws-region: eu-central-2
+          aws-region: eu-central-1
