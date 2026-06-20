@@ -41,3 +41,12 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v6
+        with:
+          role-to-assume: arn:aws:iam::350469506175:role/github-actions-lambda-deploy-role
+          aws-region: eu-central-1
