@@ -41,7 +41,15 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+
     needs: test
+
+    defaults:
+      run:
+        working-directory: 01-ci-lab
+
+    permissions:
+      id-token: write
 
     steps:
 
