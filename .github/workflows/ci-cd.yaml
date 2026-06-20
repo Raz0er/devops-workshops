@@ -59,16 +59,14 @@ jobs:
           role-to-assume: arn:aws:iam::270840513069:role/github-oidc
           aws-region: eu-central-1
             
-      - name: Prepare Lambda package 
+      - name: Prepare Lambda package
         run: |
-          cp app/calculator.py lambda_fuction.py
+          cp app/calculator.py lambda_function.py
           zip function.zip lambda_function.py
-
+      
       - name: Update Lambda code
         run: |
           aws lambda update-function-code \
             --function-name calculator-app \
-            --zip-file fileb://function.zip 
-
-
+            --zip-file fileb://function.zip
 
